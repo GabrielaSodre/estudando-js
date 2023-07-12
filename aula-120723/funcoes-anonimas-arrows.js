@@ -94,3 +94,12 @@ teste((numero) => {
 teste(numero => (numero * 2)); // numero é parametro da arrow function e não de teste, os parenteses estão omitidos, como o escopo só tem uma linha podemos omitir as chaves, após omitirmos as chames ele entrende que o que está na frente já é o retorno por isso omitimos o retono
 
 setTimeout(_ => console.log("Olá Mundo"), 3000);
+
+// Recursividade -> Chamada de uma função pela mesma função
+function fatorial(numero) {
+    if(numero == 1) {
+        return 1;
+    }
+    return numero * fatorial(numero - 1);
+}
+console.log(fatorial(4));
